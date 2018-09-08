@@ -1,16 +1,16 @@
-CREATE TABLE users (
+CREATE TABLE IF NOT EXISTS users (
 	id integer PRIMARY KEY,
 	created_at timestamp with time zone DEFAULT now(),
 	name character varying(64)
 );
 
-CREATE TABLE companies (
+CREATE TABLE IF NOT EXISTS companies (
 	id integer PRIMARY KEY,
 	created_at timestamp with time zone DEFAULT now(),
 	name character varying(64)
 );
 
-CREATE TABLE listings (
+CREATE TABLE IF NOT EXISTS listings (
 	id integer PRIMARY KEY,
 	created_at timestamp with time zone DEFAULT now(),
 	created_by integer references users (id),
@@ -18,14 +18,14 @@ CREATE TABLE listings (
 	description text
 );
 
-CREATE TABLE teams (
+CREATE TABLE IF NOT EXISTS teams (
 	company_id integer references companies (id),
 	user_id integer references users (id),
 	contact_user boolean DEFAULT false,
 	PRIMARY KEY(company_id, user_id)
 );
 
-CREATE TABLE applications (
+CREATE TABLE IF NOT EXISTS applications (
 	id integer PRIMARY KEY,
 	created_at timestamp with time zone DEFAULT now(),
 	user_id integer references users (id),
