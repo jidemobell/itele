@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "test": "export NODE_ENV=test || SET \"NODE_ENV=test\" && nodemon --exec mocha",
-    "start": "node server.js"
+    "dev": "export NODE_ENV=development || SET \"NODE_ENV=development\" && nodemon server.js"
   },
   "repository": {
     "type": "git",

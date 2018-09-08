@@ -6,7 +6,7 @@ module.exports = {
   rules: {
     "linebreak-style": 0,
     "consistent-return": 0,
-    "no-console": ["error", { allow: ["warn", "error"] }],
+    "no-console": 0, // ["error", { allow: ["warn", "error"] }],
     "arrow-body-style": 0
   }
 }
