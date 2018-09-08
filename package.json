@@ -19,6 +19,7 @@
   "homepage": "https://github.com/jidemobell/itele#readme",
   "dependencies": {
     "body-parser": "^1.18.3",
+    "dotenv": "^6.0.0",
     "express": "^4.16.3",
     "pg": "^7.4.3"
   },
@@ -26,7 +27,6 @@
     "chai": "^4.1.2",
     "chai-as-promised": "^7.1.1",
     "chai-http": "^4.2.0",
-    "dotenv": "^6.0.0",
     "eslint": "^5.5.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.14.0",
