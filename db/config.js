@@ -32,7 +32,7 @@ const config = {
 
 const getDbEnvConfig = () => {
   if (!config[env].user) {
-    console.error('database connected details has not been set in .env');
+    console.error('ensure required database connection details are set in a .env');
     process.exit();
   }
 
