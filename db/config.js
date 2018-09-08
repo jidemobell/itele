@@ -14,7 +14,7 @@ const config = {
   },
   development: {
     user: process.env.PG_USER,
-    database: 'ITELE_DBASE',
+    database: process.env.PG_DBASE,
     password: process.env.PG_KEY,
     host: process.env.PG_HOST || 'localhost',
     port: process.env.PG_PORT || 5432,
@@ -32,7 +32,7 @@ const config = {
 
 const getDbEnvConfig = () => {
   if (!config[env].user) {
-    console.error('ensure that postgres user is set');
+    console.error('database connected details has not been set in .env');
     process.exit();
   }
 
