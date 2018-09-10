@@ -32,3 +32,10 @@ CREATE TABLE IF NOT EXISTS applications (
 	listing_id integer references listings (id),
 	cover_letter text
 );
+
+CREATE INDEX index_users_id ON users USING btree (id);
+CREATE index index_listings_id ON listings USING btree (id);
+CREATE index index_applications_id ON applications USING btree (id);
+CREATE index index_applications_user_id ON applications USING btree (user_id);
+CREATE index index_applications_listing_id ON applications USING btree (listing_id);
+CREATE index index_applications_created_at ON applications USING btree (created_at);
