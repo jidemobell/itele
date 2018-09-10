@@ -1,0 +1,16 @@
+version: '3'
+services:
+  web:
+    build: .
+    command: npm start
+    ports:
+      - "4000:4000"
+    depends_on:
+      - postgres
+    environment:
+      DATABASE_URL: postgres://ericnufh:ew80fhdJgwXh4pnLW_kNq2YQBE-UDUrb@stampy.db.elephantsql.com:5432/ericnufh
+  postgres:
+    image: postgres:9.6.10-alpine
+    environment:
+      POSTGRES_USER: ericnufh
+      POSTGRES_DB: ericnufh
