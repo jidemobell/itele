@@ -1,10 +1,10 @@
 require('dotenv').config();
-require('./db/db');
 const cluster = require('cluster');
 const os = require('os');
 const express = require('express');
 const bodyParser = require('body-parser');
-const logger = require('tracer').colorConsole({ level: 'warn' });
+const logger = require('tracer').colorConsole();
+const pool = require('./db/db'); // eslint-disable-line no-unused-vars
 const routes = require('./routes/index');
 
 if (cluster.isMaster) {
@@ -22,7 +22,6 @@ if (cluster.isMaster) {
   app.use(bodyParser.urlencoded({ extended: false }));
   app.use(bodyParser.json());
   app.use('/', routes);
-  app.listen(port);
-  logger.info(`Server listening on port : ${port}`);
+  app.listen(port, () => logger.info(`Server listening on port : ${port}`));
   module.exports = app;
 }
