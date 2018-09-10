@@ -1,4 +1,4 @@
-const envConfig = require('dotenv').config();
+const envConfig = require('dotenv');
 const logger = require('tracer').colorConsole();
 const { Pool } = require('pg');
 
