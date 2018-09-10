@@ -6,6 +6,7 @@ module.exports = {
   rules: {
     "linebreak-style": 0,
     "consistent-return": 0,
-    "arrow-body-style": 0
+    "arrow-body-style": 0,
+    "import/no-extraneous-dependencies": ["error", {"devDependencies": true}]
   }
 }
