@@ -1,5 +1,8 @@
 const pool = require('../db/db');
 
+/**
+ * @param  {string} query query text
+ */
 const queryHelper = (query) => {
   return new Promise((resolve, reject) => {
     return pool.query(query)

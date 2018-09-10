@@ -1,9 +1,9 @@
 require('dotenv').config();
+require('./db/db');
 const cluster = require('cluster');
 const os = require('os');
 const express = require('express');
 const bodyParser = require('body-parser');
-const pool = require('./db/db');
 const routes = require('./routes/index');
 
 if (cluster.isMaster) {
@@ -20,7 +20,7 @@ if (cluster.isMaster) {
 
   app.use(bodyParser.urlencoded({ extended: false }));
   app.use(bodyParser.json());
-  app.use('/body', routes);
+  app.use('/', routes);
   app.listen(port);
 
   module.exports = app;
