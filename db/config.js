@@ -1,4 +1,5 @@
 require('dotenv').config();
+const logger = require('tracer').colorConsole({ level: 'warn' });
 
 const env = process.env.NODE_ENV;
 const { Pool } = require('pg');
@@ -32,7 +33,7 @@ const config = {
 
 const getDbEnvConfig = () => {
   if (!config[env].user) {
-    console.error('ensure required database connection details are set in a .env');
+    logger.error('ensure required database connection details are set in a .env');
     process.exit();
   }
 
