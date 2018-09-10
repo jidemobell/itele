@@ -1,4 +1,4 @@
-const logger = require('tracer').colorConsole({ level: 'warn' });
+const logger = require('tracer').colorConsole();
 const getDbConfig = require('./config');
 
 const pool = getDbConfig();
