@@ -5,13 +5,13 @@ const getDbConfig = require('./config');
 
 const pool = getDbConfig();
 
-pool.on('error', (err, client) => {
+pool.on('error', (err, client) => { // eslint-disable-line no-unused-vars
   logger.error(err.stack);
 });
 
 fs.readFile(path.join(__dirname, 'init.sql'), 'utf-8', (err, data) => {
   if (err) {
-    console.error('error reading sql file', err);
+    logger.error('Error reading sql file:', err.stack);
   }
 
   pool.connect()
@@ -22,7 +22,7 @@ fs.readFile(path.join(__dirname, 'init.sql'), 'utf-8', (err, data) => {
         });
     })
     .catch((error) => {
-      console.error(error);
+      logger.error(error);
       process.exit();
     });
 });
