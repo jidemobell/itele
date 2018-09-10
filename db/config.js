@@ -1,13 +1,18 @@
-require('dotenv').config();
-const logger = require('tracer').colorConsole({ level: 'warn' });
+const envConfig = require('dotenv');
+const logger = require('tracer').colorConsole();
 
 const env = process.env.NODE_ENV;
+
+if (env !== 'production') {
+  envConfig.config();
+}
+
 const { Pool } = require('pg');
 
 const config = {
   test: {
     user: process.env.PG_USER,
-    database: 'ITELE_TEST_DBASE',
+    database: process.env.PG_TEST,
     password: process.env.PG_KEY,
     host: process.env.PG_HOST || 'localhost',
     port: process.env.PG_PORT || 5432,
@@ -23,7 +28,7 @@ const config = {
   },
   production: {
     user: process.env.PG_USER,
-    database: 'ITELE_PROD_DBASE',
+    database: process.env.PG_PROD_DBASE,
     password: process.env.PG_KEY,
     host: process.env.PG_HOST || 'localhost',
     port: process.env.PG_PORT || 5432,
@@ -33,9 +38,20 @@ const config = {
 
 const getDbEnvConfig = () => {
   if (!config[env].user) {
-    logger.error('ensure required database connection details are set in a .env');
+    logger.error('Database Connection: environment variables error, user not set in environment');
     process.exit();
   }
+
+  if (!config[env].database) {
+    logger.error('Database Connection: environment variables error, database not set in environment');
+    process.exit();
+  }
+
+  if (!config[env].password) {
+    logger.error('Database Connection: environment variables error, database key not set in environment');
+    process.exit();
+  }
+
 
   switch (env) {
     case 'test':
