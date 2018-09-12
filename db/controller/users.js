@@ -1,5 +1,6 @@
 const { queryHelper } = require('../../libs/queryHelper');
-const { topActiveUsers, userInfo } = require('../const/queries');
+const { userInfo } = require('../const/info');
+const { topActiveUsers } = require('../const/active');
 
 module.exports = {
 
