@@ -9,5 +9,6 @@ RUN npm install --quiet
 
 # Bundle app source
 COPY . .
+CMD [ "npm", "start" ]
 
 
