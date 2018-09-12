@@ -11,18 +11,18 @@ if (env !== 'production') {
 const config = {
   test: {
     user: process.env.PG_USER,
-    database: process.env.PG_TEST,
+    database: process.env.PG_TEST_DB,
     password: process.env.PG_KEY,
-    host: process.env.PG_HOST || 'localhost',
-    port: process.env.PG_PORT || 5432,
+    host: process.env.PG_HOST,
+    port: process.env.PG_PORT,
     idleTimeoutMillis: 30000,
   },
   development: {
     user: process.env.PG_USER,
     database: process.env.PG_DBASE,
     password: process.env.PG_KEY,
-    host: process.env.PG_HOST || 'localhost',
-    port: process.env.PG_PORT || 5432,
+    host: process.env.PG_HOST,
+    port: process.env.PG_PORT,
     idleTimeoutMillis: 30000,
   },
   production: {
