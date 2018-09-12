@@ -6,7 +6,7 @@ module.exports = {
 
   /**
    * select top active users
-   * @param  {number} val pagination limit
+   * @param  {number} val page
    * @return {Object[]} array of user objects
    */
   listUsersByActivity(val) {

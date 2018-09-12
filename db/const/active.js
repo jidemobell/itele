@@ -38,6 +38,7 @@ module.exports = {
   SELECT t1.id,t1.name,t1.created_at,t1.count,t2.all_applied_listings 
   AS listings 
   FROM table1 t1 FULL JOIN table2 t2 
-  ON t1.id = t2.user_id LIMIT $1;
+  ON t1.id = t2.user_id 
+  ORDER BY t2.user_id LIMIT $1;
   `,
 };
