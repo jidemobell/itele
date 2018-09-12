@@ -2,7 +2,7 @@
 -- with top weekly applications and recent applied listings
 
 
-WITH table1 AS (
+WITH users_array AS (
   WITH applications_table AS (
     WITH users_counts AS (
       WITH counts AS (
@@ -29,15 +29,15 @@ WITH table1 AS (
   WHERE apts.id 
   IS NULL 
   ORDER BY applied_at DESC NULLS LAST), 
-table2 AS (
+listings_array AS (
   SELECT array_agg(l.name ORDER BY a.created_at desc) 
   AS all_applied_listings, a.user_id 
   FROM applications a FULL JOIN listings l 
   ON a.listing_id = l.id 
   GROUP BY a.user_id
 ) 
-SELECT t1.id,t1.name,t1.created_at,t1.count,t2.all_applied_listings 
+SELECT ua.id,ua.name,ua.created_at,ua.count,la.all_applied_listings 
 AS listings 
-FROM table1 t1 FULL JOIN table2 t2 
-ON t1.id = t2.user_id 
-ORDER BY t2.user_id LIMIT $1;
+FROM users_array ua FULL JOIN listings_array la 
+ON ua.id = la.user_id 
+ORDER BY la.user_id LIMIT $1;
