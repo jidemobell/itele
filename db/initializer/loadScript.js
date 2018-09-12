@@ -3,6 +3,12 @@ const path = require('path');
 const logger = require('tracer').colorConsole();
 
 module.exports = {
+  /**
+   * This function loads the app with the
+   * latest database structure. existing
+   * are not repeated.
+   * @param  {} pool
+   */
   loadDb(pool) {
     fs.readFile(path.join(__dirname, 'db.sql'), 'utf-8', (err, data) => {
       if (err) {
