@@ -8,6 +8,10 @@ if (env !== 'production') {
   envConfig.config();
 }
 
+/**
+ * environment variable names and configuration requirements
+ */
+
 const config = {
   test: {
     user: process.env.PG_USER,
