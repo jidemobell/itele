@@ -20,7 +20,7 @@ if (cluster.isMaster) {
 
   app.use(bodyParser.urlencoded({ extended: false }));
   app.use(bodyParser.json());
-  app.use('/users', usersRoutes);
+  app.use('/', usersRoutes);
   app.listen(port, () => logger.info(`Server listening on port : ${port}`));
   module.exports = app;
 }
