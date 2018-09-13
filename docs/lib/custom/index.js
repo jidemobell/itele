@@ -6,9 +6,7 @@
  */
 
 module.exports.brandNames = {
-  desktop: 'Itele API Documentation',
-  tablet: 'Itele API Docs',
-  mobile: 'API Docs'
+  desktop: 'Itele API Documentation'
 };
 
 /**
@@ -26,7 +24,7 @@ module.exports.brandClasses = 'fill-red';
  * hook to, for instance, highlight a token and link it
  * to some canonical part of documentation.
  */
-module.exports.postHighlight = function (html) {
+module.exports.postHighlight = function(html) {
   return html;
 };
 
@@ -36,7 +34,7 @@ module.exports.postHighlight = function (html) {
  * operates on endpoint URLs only.
  */
 function highlightTokens(str) {
-  return str.replace(/{[\w_]+}/g, function (str) {
+  return str.replace(/{[\w_]+}/g, function(str) {
     return '<span class="strong">' + str + '</span>';
   });
 }
@@ -50,7 +48,7 @@ function highlightTokens(str) {
  *
  * Into HTML nodes that format those endpoints in nice ways.
  */
-module.exports.transformURL = function (value) {
+module.exports.transformURL = function(value) {
   var parts = value.split(/\s+/);
   return {
     type: 'html',
