@@ -1,3 +1,7 @@
+/**
+ * query to retrieve top active users
+ */
+
 module.exports = {
   topActiveUsers:
   `

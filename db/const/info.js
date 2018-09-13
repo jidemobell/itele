@@ -1,3 +1,6 @@
+/**
+ * query to get a user
+ */
 module.exports = {
   userInfo:
    `
