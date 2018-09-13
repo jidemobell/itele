@@ -1,39 +1,38 @@
-# itele
-A JSON API
+# Itele
 
-### Prerequisites
+### Installation
 
-Itele runs successfully on a environment with node and npm as requirements,
-and a postgresql database. All database connection configuration should be set preferrably
-in a .env or locally on the app.
+Itele requires [Node.js](https://nodejs.org/) v4+ to run.
 
-### Installing
+Itele runs on a [Postgresql](https://www.postgresql.org/) database. All database connection configuration should be kept secured in a user defined file(preferable a .env).
 
-clone the repo  
+Install the dependencies and devDependencies and start the server.
 
-```
-git clone 
-```
-
-navigate into the root app folder and 
-
-```
-npm install
+```sh
+$ cd Itele
+$ npm install 
+$ node run dev
 ```
 
-to run application
+For production environments...
 
+```sh
+$ npm install 
+$ npm start
 ```
-npm start for production  & npm run dev (development)
-```
 
-## Running the tests
-
+Test...
 The app uses mocha/chai for testing
+```sh
+$ npm test
+```
 
-```
-npm test
-```
+### Docker
+Itele containsd a docker file that will expose port 4000. This can be changed to user preferred port. Simply use the Dockerfile to build the image.
+
+### Using Itele
+
+* [Itele API Documentation](https://jidemobell.github.io/itele)
 
 ## Built With
 
@@ -41,7 +40,8 @@ npm test
 * [pg](https://node-postgres.com)
 * [mocha](https://mochajs.org)
 
- 
-## Authors
 
+## Author
 * **Jide Olaniyan** 
+
+
