@@ -9,7 +9,7 @@ List top users by activaty within the week and latest applied listings
 
 
 ```endpoint
-GET /users/topActiveUsers?page={pageNumber}
+GET /topActiveUsers?page={pageNumber}
 ```
 
 #### Example request
@@ -60,7 +60,7 @@ Takes user id and returns:
   applications the user has made with the info of the listing the application is made to.
 
 ```endpoint
-GET /users/users?id={user.id}
+GET /users?id={user.id}
 ```
 
 #### Example request
