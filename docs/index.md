@@ -10,7 +10,7 @@
     <link href='css/railscasts.css' rel='stylesheet' />
   </head>
   <body>
-    <!--START--><div id='app'><div class="container unlimiter" data-reactroot="" data-reactid="1" data-react-checksum="66058090"><div class="fixed-top fixed-right space-left16" data-reactid="2"><div class="fill-light col6 pin-right" data-reactid="3"></div></div><div class="space-top5 scroll-styled overflow-auto pad1 width16 sidebar fixed-left fill-dark dark" data-reactid="4"><div class="pad0x small" data-reactid="5"><div class="small pad0x quiet space-top1" data-reactid="6">Example</div><a href="#itele" class="line-height15 pad0x pad00y quiet block " data-reactid="7">Itele</a></div></div><div class="space-left16" data-reactid="8"><div class="" data-reactid="9"><div class="clearfix" data-reactid="10"><div data-title="Itele" class="keyline-top section contain clearfix " data-reactid="11"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="12"><h2 id="itele">Itele</h2>
+    <!--START--><div id='app'><div class="container unlimiter" data-reactroot="" data-reactid="1" data-react-checksum="-1182469703"><div class="fixed-top fixed-right space-left16" data-reactid="2"><div class="fill-light col6 pin-right" data-reactid="3"></div></div><div class="space-top5 scroll-styled overflow-auto pad1 width16 sidebar fixed-left fill-dark dark" data-reactid="4"><div class="pad0x small" data-reactid="5"><div class="small pad0x quiet space-top1" data-reactid="6">Example</div><a href="#itele" class="line-height15 pad0x pad00y quiet block " data-reactid="7">Itele</a></div></div><div class="space-left16" data-reactid="8"><div class="" data-reactid="9"><div class="clearfix" data-reactid="10"><div data-title="Itele" class="keyline-top section contain clearfix " data-reactid="11"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="12"><h2 id="itele">Itele</h2>
 <p>This is a job application API. you can use this API to get users activities
 and retireve information about a user.</p>
 </div></div><div data-title="List Users" class="keyline-top section contain clearfix " data-reactid="13"><div class="space-bottom8 col6 pad2x prose clip" data-reactid="14"><h3 id="list-users">List Users</h3>
@@ -25,7 +25,7 @@ and retireve information about a user.</p>
 <tbody>
 <tr>
 <td><code>page</code></td>
-<td>a page number for pagination</td>
+<td>a page number</td>
 </tr>
 </tbody>
 </table>

@@ -23,8 +23,7 @@ http://localhost:4000/topActiveUsers?page={pageNumber}
 
 Property | Description
 ---|---
-`page` | a page number for pagination
-
+`page` | a page number 
 #### Example response
 
 ```json

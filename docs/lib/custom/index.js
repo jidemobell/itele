@@ -6,7 +6,9 @@
  */
 
 module.exports.brandNames = {
-  desktop: 'Itele API Documentation'
+  desktop: 'Itele API Documentation',
+  tablet: 'Itele API Docs',
+  mobile: 'API Docs'
 };
 
 /**
