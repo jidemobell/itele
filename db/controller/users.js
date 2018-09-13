@@ -3,10 +3,10 @@ const { userInfo } = require('../const/info');
 const { topActiveUsers } = require('../const/active');
 
 /**
- * list top active users for the week with latest applied listings.
+ * list top active users for the week
+ * with latest applied listings.
  * @function
  * @name getTopUsers
- * @memberof UserControllers
  * @param {number} page - A page number.
  * @returns {object[]} Returns an array of top users for the week.
  */
@@ -21,11 +21,11 @@ const getTopUsers = (page) => {
 };
 
 /**
- * list top active users for the week with latest applied listings.
+ * Get a user information from the
+ * user id
  * @function
  * @name getUser
- * @memberof UserControllers
- * @param {number} id - A page number.
+ * @param {number} id - A user id.
  * @returns {object} Returns a user object.
  */
 
