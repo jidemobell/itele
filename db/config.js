@@ -34,7 +34,16 @@ const config = {
   },
 };
 
+/**
+ * This function creates a connection pool
+ * @function
+ * @name getDbEnvConfig
+ * @param {}
+ * @returns {} Returns a connection pool.
+ */
+
 const getDbEnvConfig = () => {
+  // These are just checks to ensure these variables are set.
   if (env !== 'production' && !config[env].user) {
     logger.error('Database Connection: environment variables error, user not set in environment');
     process.exit();
