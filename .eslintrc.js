@@ -8,6 +8,7 @@ module.exports = {
     "consistent-return": 0,
     "arrow-body-style": 0,
     "prefer-destructuring":0,
-    "import/no-extraneous-dependencies": ["error", {"devDependencies": true}]
+    "import/no-extraneous-dependencies": ["error", {"devDependencies": true}],
+    "no-param-reassign":0
   }
 }
