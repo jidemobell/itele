@@ -1,4 +1,4 @@
-const { queryHelper } = require('../../libs/queryHelper');
+const { queryHelper } = require('../../helpers/helpers');
 const { userInfo } = require('../const/info');
 const { topActiveUsers } = require('../const/active');
 
