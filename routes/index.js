@@ -4,6 +4,7 @@ const { query, validationResult } = require('express-validator/check');
 const routes = express.Router();
 
 const { getTopUsers, getUser } = require('../db/controller/users');
+const { listingsHelper } = require('../helpers/helpers');
 
 
 const checkPageId = [
@@ -17,6 +18,7 @@ routes.get('/topActiveUsers', checkPageId, (req, res) => {
   }
   const order = req.query.page;
   getTopUsers(order).then((doc) => {
+    doc.map(user => listingsHelper(user));
     res.status(200).json(doc);
   }).catch(err => res.status(400).send(err.stack));
 });
