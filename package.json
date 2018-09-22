@@ -4,8 +4,8 @@
   "description": "A JSON API",
   "main": "server.js",
   "scripts": {
-    "test": "export NODE_ENV=test || SET \"NODE_ENV=test\" && nodemon --exec mocha",
-    "dev": "export NODE_ENV=development || SET \"NODE_ENV=development\" && nodemon server.js",
+    "test": "export NODE_ENV=test || SET \"NODE_ENV=test\" && node --exec mocha",
+    "dev": "export NODE_ENV=development || SET \"NODE_ENV=development\" && node server.js",
     "start": "export NODE_ENV=production || SET \"NODE_ENV=production\" && node server.js"
   },
   "repository": {
